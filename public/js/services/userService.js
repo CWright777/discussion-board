@@ -1,8 +1,7 @@
 angular.module('userService', []).factory('User', ['$http', function($http){
-  var users = []
   return {
-    get: function(callback){
-      $http.get('/orders').success(function(output){
+    show: function(userId,callback){
+      $http.get('/users/' + userId).success(function(output){
         callback(output);
       })
     },

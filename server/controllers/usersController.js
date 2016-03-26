@@ -36,11 +36,16 @@ module.exports = {
       })
       newUser.save(function(err){
         if(err){
-          console.log(err)
+          console.log(err);
         } else {
-          res.json(newUser.id)
+          res.json(newUser.id);
         }
       })
     }
+  },
+  show: function(req,res){
+    User.findOne({_id: req.params.id}, function(err,user){
+      res.json(user);
+    })
   }
 }
