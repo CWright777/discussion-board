@@ -1,5 +1,7 @@
 angular.module('discussionApp',[
     'ngRoute',
     'appRoutes',
-    'homesCtrl'
+    'loginsCtrl',
+    'userService',
+    'dashboardsCtrl'
 ])
